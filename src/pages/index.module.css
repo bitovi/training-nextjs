@@ -14,12 +14,12 @@
 
 .title {
   font-size: 48px;
-  color: white;
+  color: var(--light);
 }
 
 .subtitle {
   font-size: 24px;
-  color: white;
+  color: var(--light);
 }
 
 .button {
@@ -29,13 +29,13 @@
   margin: calc(var(--spacing) * 2) 0;
 
   font-size: 24px;
-  background-color: white;
-  border: white;
+  background-color: var(--light);
+  border: var(--light);
   color: var(--bitovi-red-600);
 }
 
 .button:hover {
   cursor: pointer;
   background-color: var(--bitovi-red-800);
-  color: white;
+  color: var(--light);
 }

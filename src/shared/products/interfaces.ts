@@ -22,4 +22,10 @@ export interface CartSummary extends BaseCart {
 
 export interface Cart extends BaseCart {
   products: Array<{ quantity: number } & Product>;
+  orderSummary: {
+    subtotal: string;
+    shipping: string;
+    tax: string;
+    total: string;
+  };
 }

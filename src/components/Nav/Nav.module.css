@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--light-md);
 }
 
 .navList {
@@ -16,7 +16,7 @@
 }
 
 .navListItem:not(:last-child) {
-  margin-right: 16px;
+  margin-right: var(--spacing);
 }
 
 .link {

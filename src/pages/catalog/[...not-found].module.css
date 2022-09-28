@@ -16,7 +16,7 @@
   font-size: 24px;
   border: var(--bitovi-red-600);
   background-color: var(--bitovi-red-600);
-  color: white;
+  color: var(--light);
 }
 
 .button:hover {
