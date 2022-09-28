@@ -18,8 +18,8 @@ const Nav = () => {
           </Link>
         </li>
         <li className={styles.navListItem}>
-          <Link href="/user">
-            <a className={styles.link}>User</a>
+          <Link href="/about">
+            <a className={styles.link}>About</a>
           </Link>
         </li>
       </ul>

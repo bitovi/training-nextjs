@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { Product } from "@shared/products";
 
-import { getProductById } from "@shared/products";
+import { getProductById, getAllProductIds } from "@shared/products";
 
 import styles from "./[id].module.css";
 
@@ -45,7 +45,15 @@ export const getStaticProps: GetStaticProps<
   return { props: { product } };
 };
 
-export const getStaticPaths: GetStaticPaths = () => ({
-  paths: [],
-  fallback: "blocking",
-});
+export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
+  const products = await getAllProductIds();
+
+  const paths = products.map((id) => {
+    return { params: { id: id.toString() } };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
