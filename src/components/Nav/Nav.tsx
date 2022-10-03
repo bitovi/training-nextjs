@@ -5,7 +5,7 @@ import styles from "./Nav.module.css";
 const Nav = () => {
   return (
     <nav className={styles.container}>
-      <Image src="/bitovi-red.png" alt="Vercel Logo" width={100} height={30} />
+      <Image src="/bitovi-red.png" alt="Bitovi Logo" width={100} height={30} />
       <ul className={styles.navList}>
         <li className={styles.navListItem}>
           <Link href="/">
