@@ -14,6 +14,6 @@ export default async function handler(
     return res.json({ revalidated: true });
   } catch (error) {
     // Just like before, if an error happens, the cached page remains
-    return res.status(500).send("Revalidation errror: " + error);
+    return res.status(500).send("Revalidation error: " + error);
   }
 }
