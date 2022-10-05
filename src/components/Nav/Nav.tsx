@@ -8,17 +8,17 @@ const Nav = () => {
       <Image src="/bitovi-red.png" alt="Vercel Logo" width={100} height={30} />
       <ul className={styles.navList}>
         <li className={styles.navListItem}>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={styles.link}>Home</a>
           </Link>
         </li>
         <li className={styles.navListItem}>
-          <Link href="/cart?id=1">
+          <Link href="/cart?id=1" passHref>
             <a className={styles.link}>Cart</a>
           </Link>
         </li>
         <li className={styles.navListItem}>
-          <Link href="/about">
+          <Link href="/about" passHref>
             <a className={styles.link}>About</a>
           </Link>
         </li>
