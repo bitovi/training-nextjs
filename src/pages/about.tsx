@@ -36,5 +36,5 @@ export default AboutPage;
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
   const aboutUs = await getAboutUsContent();
 
-  return { props: { aboutUs } };
+  return { props: { aboutUs }, revalidate: 35 };
 };
