@@ -49,6 +49,10 @@ export const getCartWithProducts = async (
 
   const cart = await getCart(parseInt(cartId, 10));
 
+  if (!cart) {
+    return;
+  }
+
   const products = await Promise.all(
     cart.products.map(({ productId }) => getProductById(productId.toString()))
   );
