@@ -1,0 +1,41 @@
+.container {
+  background-color: var(--bitovi-red-600);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing) * 4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  height: 600px;
+}
+
+.title {
+  font-size: 48px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: white;
+}
+
+.button {
+  width: 200px;
+  height: 55px;
+  border-radius: var(--border-radius);
+  margin: calc(var(--spacing) * 2) 0;
+
+  font-size: 24px;
+  background-color: white;
+  border: white;
+  color: var(--bitovi-red-600);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--bitovi-red-800);
+  color: white;
+}

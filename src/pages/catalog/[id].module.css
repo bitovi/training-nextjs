@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing) * 2);
+  gap: var(--spacing);
+  max-width: 1000px;
+}
+
+.productImage {
+  height: 500px;
+  border-radius: var(--border-radius);
+  padding: var(--spacing);
+  background-color: white;
+}
+
+.secondaryText {
+  color: #777;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  border-radius: var(--border-radius);
+  margin: calc(var(--spacing) * 2) 0;
+
+  font-size: 24px;
+  border: var(--bitovi-red-600);
+  background-color: var(--bitovi-red-600);
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+
+  background-color: var(--bitovi-red-800);
+}
