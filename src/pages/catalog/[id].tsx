@@ -1,15 +1,15 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { Product } from "@shared/products";
 
-import { getProductById } from "@shared/products";
+import { getProductById, getAllProductIds } from "@shared/products";
 
 import styles from "./[id].module.css";
 
-interface CatalogItemsProps {
+interface CatalogProps {
   product: Product;
 }
 
-const CatalogItemPage: NextPage<CatalogItemsProps> = ({ product }) => {
+const CatalogItemPage: NextPage<CatalogProps> = ({ product }) => {
   return (
     <div className={styles.container}>
       <img
@@ -31,7 +31,7 @@ const CatalogItemPage: NextPage<CatalogItemsProps> = ({ product }) => {
 export default CatalogItemPage;
 
 export const getStaticProps: GetStaticProps<
-  CatalogItemsProps,
+  CatalogProps,
   { id: string }
 > = async ({ params }) => {
   const product = await getProductById(params?.id);
@@ -45,7 +45,15 @@ export const getStaticProps: GetStaticProps<
   return { props: { product } };
 };
 
-export const getStaticPaths: GetStaticPaths = () => ({
-  paths: [],
-  fallback: "blocking",
-});
+export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
+  const products = await getAllProductIds();
+
+  const paths = products.map((id) => {
+    return { params: { id: id.toString() } };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
