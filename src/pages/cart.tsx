@@ -56,7 +56,7 @@ export default CartPage;
 export const getServerSideProps: GetServerSideProps<
   CartPageProps,
   { id: string }
-> = async ({ params, query }) => {
+> = async ({ query }) => {
   const cart = await getCartWithProducts(query?.id);
 
   if (!cart) {
