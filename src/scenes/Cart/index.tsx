@@ -1,4 +1,5 @@
 import { Cart } from "@shared/products";
+
 import styles from './cart.module.css'
 
 const CartScene= ({ cart }: {cart: Cart}) => {

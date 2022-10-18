@@ -2,8 +2,6 @@ import type { GetServerSideProps, NextPage } from "next";
 import type { Cart } from "@shared/products";
 
 import { getCartWithProducts } from "@shared/products";
-
-import styles from "./cart.module.css";
 import CartScene from "@scenes/Cart";
 
 interface CartPageProps {
