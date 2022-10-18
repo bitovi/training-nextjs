@@ -1,34 +1,21 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import type { Product } from "@shared/products";
-
+import type { Product as ProductType } from "@shared/products";
+import ProductScene from "src/scenes/Product"
 import { getProductById, getAllProductIds } from "@shared/products";
 
 import styles from "./[id].module.css";
 
 interface CatalogProps {
-  product: Product;
+  product: ProductType;
 }
 
-const CatalogItemPage: NextPage<CatalogProps> = ({ product }) => {
+const ProductPage: NextPage<CatalogProps> = ({ product }) => {
   return (
-    <div className={styles.container}>
-      <img
-        alt={product.title}
-        src={product.image}
-        className={styles.productImage}
-      />
-      <div>
-        <p className={styles.secondaryText}>{product.category}</p>
-        <h1>{product.title}</h1>
-        <p className={styles.price}>${product.price}</p>
-        <p className={styles.secondaryText}>{product.description}</p>
-        <button className={styles.button}>Add to Cart</button>
-      </div>
-    </div>
+    <ProductScene product={product}/>
   );
 };
 
-export default CatalogItemPage;
+export default ProductPage;
 
 export const getStaticProps: GetStaticProps<
   CatalogProps,

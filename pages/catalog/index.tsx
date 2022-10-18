@@ -5,34 +5,11 @@ import Link from "next/link";
 
 import { getAllProducts } from "@shared/products";
 
-import styles from "./index.module.css";
+import Catalog from "src/scenes/Catalog";
+import { CatalogProps } from "src/scenes/Catalog";
 
-interface CatalogProps {
-  products: Product[];
-}
-
-const CatalogPage: NextPage<CatalogProps> = ({ products }) => {
-  return (
-    <>
-      <h1>Catalog</h1>
-      <div className={styles.grid}>
-        {products.map((product) => (
-          <Link href={`/catalog/${product.id}`} key={product.id}>
-            <div className={styles.product}>
-              <img
-                alt={product.title}
-                src={product.image}
-                className={styles.productImage}
-              />
-              <p className={styles.productTitle}>{product.title}</p>
-              <p className={styles.category}>{product.category}</p>
-              <p className={styles.price}>${product.price}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </>
-  );
+const CatalogPage = ({ products }: CatalogProps) => {
+  return <Catalog products={products} />;
 };
 
 export default CatalogPage;
