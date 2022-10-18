@@ -1,6 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { Product as ProductType } from "@shared/products";
-import ProductScene from "src/scenes/Product"
+import ProductScene from "@scenes/Product"
 import { getProductById, getAllProductIds } from "@shared/products";
 
 import styles from "./[id].module.css";

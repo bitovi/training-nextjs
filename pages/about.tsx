@@ -1,6 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
 import type { About } from "@shared/about";
-import AboutUs from "src/scenes/About/About";
+import AboutUs from "@scenes/About/About";
 
 import { getAboutUsContent } from "@shared/about";
 

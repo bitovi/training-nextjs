@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import { getAllProducts } from "@shared/products";
 
-import Catalog from "src/scenes/Catalog";
-import { CatalogProps } from "src/scenes/Catalog";
+import Catalog from "@scenes/Catalog";
+import { CatalogProps } from "@scenes/Catalog";
 
 const CatalogPage = ({ products }: CatalogProps) => {
   return <Catalog products={products} />;

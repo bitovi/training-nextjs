@@ -4,7 +4,7 @@ import type { Cart } from "@shared/products";
 import { getCartWithProducts } from "@shared/products";
 
 import styles from "./cart.module.css";
-import CartScene from "src/scenes/Cart";
+import CartScene from "@scenes/Cart";
 
 interface CartPageProps {
   cart: Cart;
