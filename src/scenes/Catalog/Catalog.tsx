@@ -2,7 +2,7 @@ import { Product } from "@shared/products";
 
 import Link from "next/link";
 
-import styles from "./index.module.css"
+import styles from "./Catalog.module.css"
 
 export interface CatalogProps {
   products: Product[];
