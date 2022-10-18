@@ -1,5 +1,7 @@
 ## Helpful Code Snippets
 
+Typing a Page
+
 ```ts
 import type { NextPage } from "next";
 
