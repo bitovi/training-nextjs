@@ -3,7 +3,7 @@
 Typing a Page
 
 ```ts
-import type { NextPage } from "next";
+import type { Next Page } from "next";
 
 interface Props {
   name: string;
