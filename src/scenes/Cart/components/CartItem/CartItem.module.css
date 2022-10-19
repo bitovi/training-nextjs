@@ -1,0 +1,25 @@
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing);
+}
+
+.productContainer:not(:last-child) {
+  border-bottom: 1px solid var(--light-md);
+}
+
+.productImage {
+  height: 150px;
+  padding: var(--spacing);
+}
+
+
+.label {
+  font-weight: bold;
+}
+
+.secondaryText {
+  color: var(--light-hv);
+}
+

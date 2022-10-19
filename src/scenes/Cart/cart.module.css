@@ -3,21 +3,6 @@
   align-items: center;
 }
 
-.productContainer {
-  display: flex;
-  align-items: center;
-  padding: var(--spacing);
-}
-
-.productContainer:not(:last-child) {
-  border-bottom: 1px solid var(--light-md);
-}
-
-.productImage {
-  height: 150px;
-  padding: var(--spacing);
-}
-
 .orderSummary {
   background-color: var(--background-gray);
   margin-left: calc(var(--spacing) * 2);
@@ -34,20 +19,6 @@
 .summaryTitle {
   font-size: 24px;
   font-weight: bold;
-}
-
-.summaryItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.secondaryText {
-  color: var(--light-hv);
 }
 
 .button {
