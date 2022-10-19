@@ -1,0 +1,6 @@
+.container {
+  padding: var(--spacing);
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(1, 800px);
+}

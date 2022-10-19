@@ -1,5 +1,7 @@
 import type {About} from "@shared/about"
 
+import AboutContainer from "./components/AboutContainer";
+import AboutSection from "./components/AboutSection"
 import styles from "./about.module.css"
 interface AboutPageProps {
   aboutUs: About;
@@ -8,23 +10,13 @@ interface AboutPageProps {
 
 const AboutUs= ({ aboutUs }:AboutPageProps) => {
   return (
-    <>
-      <h1 className={styles.title}>About Us!</h1>
-      <div className={styles.container}>
-        <div className={styles.aboutSection}>
-          <h2>{aboutUs.location.title}</h2>
-          <p>{aboutUs.location.description}</p>
-        </div>
-        <div className={styles.aboutSection}>
-          <h2>{aboutUs.about.title}</h2>
-          <p>{aboutUs.about.description}</p>
-        </div>
-        <div className={styles.aboutSection}>
-          <h2>{aboutUs.team.title}</h2>
-          <p>{aboutUs.team.description}</p>
-        </div>
-      </div>
-    </>
+    <AboutContainer>
+        <AboutSection title={aboutUs.location.title} description={aboutUs.location.description} />
+        <AboutSection title={aboutUs.about.title} description={aboutUs.about.description} />
+        <AboutSection title={aboutUs.team.title} description={aboutUs.team.description} />
+      </AboutContainer>
+
+
   );
 };
 
