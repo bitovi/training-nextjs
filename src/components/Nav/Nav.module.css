@@ -10,26 +10,3 @@
 .navList {
   list-style-type: none;
 }
-
-.navListItem {
-  display: inline-block;
-}
-
-.navListItem:not(:last-child) {
-  margin-right: var(--spacing);
-}
-
-.link {
-  color: var(--bitovi-red-500);
-  text-decoration: none;
-}
-
-.link:visited {
-  color: var(--bitovi-red-800);
-}
-
-.link:hover,
-.link:focus,
-.link:active {
-  text-decoration: underline;
-}
