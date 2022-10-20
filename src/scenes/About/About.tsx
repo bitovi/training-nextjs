@@ -1,7 +1,6 @@
 import type {About} from "@shared/about"
 import styles from "./about.module.css"
 
-import styles from "./about.module.css"
 interface AboutPageProps {
   aboutUs: About;
 }
