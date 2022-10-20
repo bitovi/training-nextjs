@@ -1,8 +1,12 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { Product as ProductType } from "@shared/products";
-import ProductScene from "@scenes/Product"
+import ProductScene from "@scenes/Product/Product"
 import { getProductById, getAllProductIds } from "@shared/products";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> soln/arch-1
 interface CatalogProps {
   product: ProductType;
 }
