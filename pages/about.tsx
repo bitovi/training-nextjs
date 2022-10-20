@@ -1,17 +1,11 @@
 import type { NextPage, GetStaticProps } from "next";
 import type { About } from "@shared/about";
 
-import AboutUs from "@scenes/About/About";
+import AboutUs from "@scenes/About";
 import { getAboutUsContent } from "@shared/about";
 
-interface AboutProps {
-  aboutUs: About
-}
-
-const AboutPage: NextPage<AboutProps> = ({ aboutUs }) => {
-  return (
-    <AboutUs aboutUs={aboutUs}/>
-  );
+const AboutPage = ({ aboutUs }: { aboutUs: About }) => {
+  return <AboutUs aboutUs={aboutUs} />;
 };
 
 export default AboutPage;
