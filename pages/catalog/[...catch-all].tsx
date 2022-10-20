@@ -1,4 +1,4 @@
-import CatalogCatchAll from "@scenes/CatalogCatchAll";
+import CatalogCatchAll from "@scenes/Catalog/CatalogCatchAll";
 import { NextPage } from "next";
 
 const CatchAllPage: NextPage = () => {

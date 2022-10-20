@@ -1,4 +1,5 @@
 import type {About} from "@shared/about"
+import styles from "./about.module.css"
 
 import AboutContainer from "./components/AboutContainer";
 import AboutSection from "./components/AboutSection"
