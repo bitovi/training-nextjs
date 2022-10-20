@@ -3,8 +3,8 @@ import type { NextPage, GetStaticProps } from "next";
 
 import { getAllProducts } from "@shared/products";
 
-import Catalog from "@scenes/Catalog/Catelog";
-import { CatalogProps } from "@scenes/Catalog/Catelog";
+import Catalog from "@scenes/Catalog/";
+import { CatalogProps } from "@scenes/Catalog/";
 
 const CatalogPage: NextPage<CatalogProps> = ({ products }) => {
   return <Catalog products={products} />;

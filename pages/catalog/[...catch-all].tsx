@@ -1,4 +1,4 @@
-import CatalogCatchAll from "@scenes/Catalog/CatalogCatchAll";
+import CatalogCatchAll from "@scenes/CatalogCatchAll";
 import { NextPage } from "next";
 
 

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Home from "src/scenes/Home";
+import Home from "@scenes/Home";
 
 const IndexPage: NextPage = () => {
   return (
